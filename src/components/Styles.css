@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+:root{
+    --time-color: #ffffff;
+    --stopwatch-button: #5AB9EA;
+}
+
+
+body{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+}
+
+#login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0C10;
+}
+
+#register-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0C10;
+}
+
+#page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0C10;
+}
+
+#quoteHeader{
+    color:#5AB9EA;
+    width: fit-content;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+#quoteAuthor{
+    color:#5AB9EA;
+    text-align: center;
+    font-style: italic;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.char{
+    animation: fadeIn 1s ease-out 1 both;
+    display: inline-block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: perspective(500px) translate3d(-35px,-40px,-150px) rotate3d(1,-1,0,35deg);
+    }
+    to{
+        opacity: 1;
+        transform: perspective(500px) translate3d(0,0,0);
+    }
+}
+
+#logoDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 55vh;
+}
+
+#imageBox{
+    max-width: 55%;
+    min-height: 45%;
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#mobileLoginDiv{
+    display: flex;
+    color: #5AB9EA;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    align-items: center;
+}
+
+#mobileRegisterDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 50vh;
+}
+
+#loginDiv{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+}
+
+#registerDiv{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25%;
+    width: 60%;
+    height: 100%;
+}
+
+#registerDiv form{
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#textBoxBorder{
+    height: 5%;
+    position: relative;
+    top: 13%;
+    font-size: 1.5em;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 9999em;
+}
+
+#usernameTextBox{
+    display: inherit;
+    border-radius: inherit;
+    width: 98%;
+    height: 96%;
+    margin: 0%;
+    border:none;
+    outline: none;
+    padding: 0 .325em;
+    z-index: 1;
+}
+
+#passwordTextBox{
+    display: inherit;
+    border-radius: inherit;
+    width: 98%;
+    height: 96%;
+    margin: 0%;
+    border: none;
+    outline: none;
+    padding: 0 .325em;
+    z-index: 1;
+}
+
+#loginBtn{
+    position: relative;
+    top: 15%;
+    border:5em;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 8px #5AB9EA;
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+#signUpBtn{
+    position: relative;
+    top: 35%;
+    border:5em;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 0.7em 2em;
+    margin-top: 10%;
+    border-radius: 65px;
+    box-shadow: 1px 1px 8px #5AB9EA;
+    width: 100%;
+}
+
+#backBtn{
+    border:5em;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 0.7em 2em;
+    margin-top: 10%;
+    border-radius: 65px;
+    box-shadow: 1px 1px 8px #5AB9EA;
+    width: 100%;
+}
+
+/*****----Navbar/Footer Styling----*****/
+#dashboard-navbar{
+    position:relative;
+    background-color: #5AB9EA;
+    display: flex;
+    padding: 16px;
+    z-index: 50;
+    justify-content: space-around;
+    width: 100%;
+    height: 7vh;
+}
+
+#footer-div{
+    background-color: #5AB9EA;
+    display: flex;
+    padding: 16px;
+    z-index: 50;
+    justify-content: space-around;
+    width: 100%;
+    height: 7vh;
+}
+
+#footerBtn{
+    width: 50%;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #5AB9EA;
+    color:#0B0C10;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#dashboardBtn{
+    width: 10%;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #5AB9EA;
+    color:#0B0C10;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+}
+/*****----End of Navbar/Footer Styling----*****/
+
+
+/*****----Dashboard Styling----*****/
+#content-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+}
+
+#workout-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+}
+
+#stopwatch-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 95vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B0C10;
+}
+
+#stopwatch-circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 600px;
+    border: 2px solid;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 1px var(--time-color);
+    animation: glow 1s ease-in-out infinite alternate;
+    color: var(--time-color);
+}
+
+@keyframes glow{
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0B0C10, 0 0 40px #0B0C10, 0 0 50px #0B0C10, 0 0 50px #0B0C10, 0 0 50px #0B0C10;
+    }
+    
+    to {
+      box-shadow: 0 0 20px #fff, 0 0 30px #0B0C10, 0 0 40px #0B0C10, 0 0 50px var(--stopwatch-button), 0 0 30px var(--stopwatch-button), 0 0 50px var(--stopwatch-button), 0 0 50px var(--stopwatch-button);
+    }
+  }
+
+#time{
+    width: 10%;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 60px;
+    text-shadow: 0 0 2px var(--time-color), 0 0 2px var(--time-color), 0 0 4px var(--time-color), 0 0 2px var(--time-color), 0 0 6px var(--time-color), 0 0 30px var(--time-color), 0 0 6px var(--time-color);
+    color: var(--time-color);
+}
+
+#controls-container{
+    display: flex;
+    height: 190px;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* #controls-container div{
+    height: 40px;
+} */
+
+#StopWatchTimer{
+    text-align: center;
+    max-width: 85%;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 60px;
+    text-shadow: 0 0 2px var(--time-color), 0 0 2px var(--time-color), 0 0 4px var(--time-color), 0 0 2px var(--time-color), 0 0 6px var(--time-color), 0 0 30px var(--time-color), 0 0 6px var(--time-color);
+    color: var(--time-color);
+}
+
+#StopWatchBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84px;
+    width: 100%;
+}
+
+#ActiveBtn{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#firstBtn{
+    padding:15px;
+    border: 4px solid;
+    border-radius: 50%;
+    background-color: #0B0C10;
+    border-color: var(--stopwatch-button);
+}
+
+#secBtn{
+    padding:15px;
+    border: 4px solid;
+    border-radius: 50%;
+    background-color: #0B0C10;
+    border-color: var(--stopwatch-button);
+}
+
+#stopwatch-icon{
+    font-size: 4em;
+    height: 45px;
+    width: 45px;
+    color: #5AB9EA;
+}
+
+#dashboard-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#workoutUL{
+    list-style-type: none;
+}
+
