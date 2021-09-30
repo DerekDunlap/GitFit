@@ -11,7 +11,7 @@ function StartWorkoutBtn(){
     }
 
     return(
-        <button onClick={handleRouteChange} value='/stopwatch'>Begin Workout!</button>
+        <button id='startWorkoutBtn' onClick={handleRouteChange} value='/stopwatch'>Begin Workout!</button>
     )
 }
 

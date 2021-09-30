@@ -1,9 +1,8 @@
 import React,{useState,useEffect} from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
-import StopWatch from "./StopWatch";
 import {connect} from 'react-redux'
-import StartWorkoutBtn from "./StartWorkoutBtn";
+import StopWatch from "./StopWatch";
 
 function AddWorkout(props){
     useEffect(()=>{
@@ -36,7 +35,7 @@ function AddWorkout(props){
     }
 
     const handleAddWorkout=(e)=>{
-        fetch('http://localhost:8080/login',{
+        fetch('http://localhost:8080/edit-workout',{
            method: 'POST',
            headers:{
                'Content-Type':'application/json'
@@ -83,8 +82,7 @@ function AddWorkout(props){
                 <label value={exercise.description}><strong>Description:<br/>{exercise.description}</strong><br/></label>
                 <span value={exercise.set}><strong>Number of Sets: {exercise.numOfSets}</strong><br/></span>
                 <span value={exercise.reps}><strong>Number of Reps: {exercise.numOfReps}</strong><br/></span>
-                Rating: <button><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></button>
-                <button onClick={handleRemoveWorkout} value={exercise.workoutID}>Remove</button>
+                <button id='removeWorkoutBtn' onClick={handleRemoveWorkout} value={exercise.workoutID}>Remove</button>
             </li>
         )
     })
@@ -102,22 +100,23 @@ function AddWorkout(props){
                 <button onClick={handleAddWorkout}>Add</button>
             </div> */}
             <div>
-
-                <StopWatch/>
+                <div id='dashTimer-container'>
+                    <StopWatch/> 
+                </div>
                 <ul>
                     <h3>My Workouts:</h3>
                     {workoutPlanItem}
                 </ul>
             </div>
         </div>
-            
     )
 }
 
 const mapStateToProps=(state)=>{
     return{
         user:state.userReducer.user,
-        workoutPlan:state.userReducer.workoutPlan
+        workoutPlan:state.userReducer.workoutPlan,
+        timer:state.userReducer.timer
     }
 }
 

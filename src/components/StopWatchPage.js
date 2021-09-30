@@ -4,7 +4,9 @@ import StopWatch from "./StopWatch";
 function StopWatchPage(){
     return(
         <div id='stopwatch-page'>
-            <StopWatch/>
+            <div id='stopwatch-circle'>
+                <StopWatch/>
+            </div>
         </div>
     )
 }

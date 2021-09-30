@@ -41,20 +41,16 @@ function StopWatch(props){
     }
     
 
-    return(
-        <div id='stopwatch-circle'>
-            <div id='controls-container'>
-            <StopWatchTimer time={props.timer}/>
-            <StopWatchBtns 
-            isActive={isActive}
-            isPaused={isPaused}
-            onHandleStart={onHandleStart}
-            onHandlePauseStart={onHandlePauseStart}
-            onHandleReset={onHandleReset}
-            />
-            </div>
-        </div>
-    )
+    return(<div id='controls-container'>
+                <StopWatchTimer time={props.timer}/>
+                <StopWatchBtns 
+                isActive={isActive}
+                isPaused={isPaused}
+                onHandleStart={onHandleStart}
+                onHandlePauseStart={onHandlePauseStart}
+                onHandleReset={onHandleReset}
+                />
+            </div>)
 }
 
 const mapStateToProps=(state)=>{

@@ -22,6 +22,7 @@ function Login(props) {
     .then(response=>{
       return response.json()
     }).then(results=>{
+      console.log(results)
       props.onUserLogin(results.guest)
       props.history.push(e.target.value)
     })
@@ -43,6 +44,7 @@ function Login(props) {
     }).then(user=>{
       console.log(user)
         if(user.success){
+          console.log(user.user)
           props.onUserLogin(user.user)
           props.history.push(e.target.value)
         }
@@ -54,17 +56,23 @@ function Login(props) {
       <div id='logoDiv'>
       </div>
       <div id='loginDiv'>
-        <span id='textBoxBorder'>
-        <input id='usernameTextBox' onChange={handleOnChange} type='text' placeholder='Username' name='username' required/>
-        <span></span>
-        </span>
-        <span id='textBoxBorder'>
-        <input id='passwordTextBox'onChange={handleOnChange} type='password' placeholder='Password' name='password' required/>
-        <span></span>
-        </span>
-        <button id='loginBtn' onClick={handleOnLogin} value='/dashboard'>Login</button>
-        <button id='loginBtn' onClick={handleOnGuestLogin} value='/dashboard'>Guest Login</button>
-        <button id='loginBtn' onClick={handleRouteChange} value='/register'>No GitFit?</button>
+        <div id='loginTextDiv'>
+          <span id='textBoxBorder'>
+          <input id='usernameTextBox' onChange={handleOnChange} type='text' placeholder='Username' name='username' required/>
+          <span></span>
+          </span>
+          <span id='textBoxBorder'>
+          <input id='passwordTextBox'onChange={handleOnChange} type='password' placeholder='Password' name='password' required/>
+          <span></span>
+          </span>
+        </div>
+        <div id='loginBtnDiv'>
+          <button id='loginBtn' onClick={handleOnLogin} value='/dashboard'>Login</button>
+          <button id='loginBtn' onClick={handleOnGuestLogin} value='/dashboard'>Guest Login</button>
+        </div>
+        <div id='loginBtnDiv'>
+          <button id='loginBtn' onClick={handleRouteChange} value='/register'>No GitFit?</button>
+        </div>
       </div>
     </div>
   )

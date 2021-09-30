@@ -78,7 +78,7 @@ a:link{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 25%;
     height: 55vh;
 }
 
@@ -113,18 +113,83 @@ a:link{
 #loginDiv{
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 100%;
-    justify-content: center;
+    width: 30%;
+    height: 75%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#loginTextDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25%;
+}
+
+#createTextDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15%;
+}
+
+#loginBtnDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 35%;
 }
 
 #registerDiv{
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 25%;
+    align-items: center;
+    justify-content: center;
     width: 60%;
     height: 100%;
+    color: #ffffff;
+}
+
+#bodyMass-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bodyMass-div h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bodyMass-input{
+    display: flex;
+    width: 250px;
+}
+
+#bodyMass-input h4{
+    width: 100%;
+    margin: 0;
+}
+
+#bodyMassTextBox{
+    width: 40px;
+    height: 22px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#weightTextBox{
+    width: 80px;
+    height: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 #registerDiv form{
@@ -135,12 +200,9 @@ a:link{
 }
 
 #textBoxBorder{
-    height: 5%;
     position: relative;
-    top: 13%;
-    font-size: 1.5em;
     background: linear-gradient(21deg,#5AB9EA,#8860C0);
-    padding: 3px;
+    padding: 5px;
     display: inline-block;
     border-radius: 9999em;
 }
@@ -148,28 +210,43 @@ a:link{
 #usernameTextBox{
     display: inherit;
     border-radius: inherit;
-    width: 98%;
+    font-size: 25px;
+    width: 240px;
     height: 96%;
     margin: 0%;
     border:none;
     outline: none;
-    padding: 0 .325em;
     z-index: 1;
+    position: relative;
 }
 
 #passwordTextBox{
     display: inherit;
     border-radius: inherit;
-    width: 98%;
+    font-size: 25px;
+    width: 240px;
     height: 96%;
     margin: 0%;
     border: none;
     outline: none;
-    padding: 0 .325em;
+    position: relative;
     z-index: 1;
 }
 
 #loginBtn{
+    position: relative;
+    border:5em;
+    outline: none;
+    font-size: 20px;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 250px;
+    border-radius: 65px;
+    box-shadow: 1px 1px 8px #5AB9EA;
+}
+
+#startWorkoutBtn{
     position: relative;
     top: 15%;
     border:5em;
@@ -179,8 +256,31 @@ a:link{
     padding: 0.7em 2em;
     border-radius: 65px;
     box-shadow: 1px 1px 8px #5AB9EA;
-    width: 100%;
-    margin-bottom: 15%;
+    width: 40%;
+}
+
+#addWorkoutBtn{
+    position: relative;
+    border:5em;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 8px #5AB9EA;
+    width: 15%;
+}
+
+#removeWorkoutBtn{
+    position: relative;
+    border:5em;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 8px #5AB9EA;
+    width: 20%;
 }
 
 #signUpBtn{
@@ -311,14 +411,6 @@ a:link{
     }
   }
 
-#time{
-    width: 10%;
-    font-family: 'Orbitron',sans-serif;
-    font-size: 60px;
-    text-shadow: 0 0 2px var(--time-color), 0 0 2px var(--time-color), 0 0 4px var(--time-color), 0 0 2px var(--time-color), 0 0 6px var(--time-color), 0 0 30px var(--time-color), 0 0 6px var(--time-color);
-    color: var(--time-color);
-}
-
 #controls-container{
     display: flex;
     height: 190px;
@@ -328,15 +420,26 @@ a:link{
     align-items: center;
 }
 
-/* #controls-container div{
-    height: 40px;
-} */
+#controls-container{
+    background-color: #0B0C10;
+}
+
+#dashTimer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B0C10;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 #StopWatchTimer{
     text-align: center;
     max-width: 85%;
     font-family: 'Orbitron',sans-serif;
     font-size: 60px;
+    background-color: #0B0C10;
     text-shadow: 0 0 2px var(--time-color), 0 0 2px var(--time-color), 0 0 4px var(--time-color), 0 0 2px var(--time-color), 0 0 6px var(--time-color), 0 0 30px var(--time-color), 0 0 6px var(--time-color);
     color: var(--time-color);
 }
