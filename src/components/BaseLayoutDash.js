@@ -3,7 +3,7 @@ import Footer from './Footer'
 
 function BaseLayoutDash(props){
     return(
-        <div>
+        <div id='baseLayout-container'>
             <Navbar/>
             {props.children}
             <Footer/>

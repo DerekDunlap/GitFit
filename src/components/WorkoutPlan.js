@@ -1,8 +1,8 @@
-import React,{useState,useEffect} from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faStar} from "@fortawesome/free-solid-svg-icons";
+import React,{useEffect} from "react"
 import {connect} from 'react-redux'
 import StopWatch from "./StopWatch";
+import StopWatchBtns from "./StopWatchBtns";
+import StopWatchTimer from "./StopWatchTimer";
 
 function AddWorkout(props){
     useEffect(()=>{
@@ -21,40 +21,8 @@ function AddWorkout(props){
         .then(response=>{
             return response.json()
         }).then(results=>{
+            console.log(results)
             props.onWorkoutPlanLoaded(results)
-        })
-    }
-    
-    const [workout,setWorkout]=useState({})
-
-    const handleOnChange=(e)=>{
-        setWorkout({
-            ...workout,
-            [e.target.name]:e.target.value
-        })
-    }
-
-    const handleAddWorkout=(e)=>{
-        fetch('http://localhost:8080/edit-workout',{
-           method: 'POST',
-           headers:{
-               'Content-Type':'application/json'
-           },
-           body:JSON.stringify({
-               name:workout.name,
-               set:workout.set,
-               reps:workout.reps,
-               description:workout.description
-           })
-       }).then(response=>{
-           console.log(response)
-            return response.json()
-        }).then(user=>{
-          console.log(user)
-            if(user.success){
-              props.onUserLogin(user.user)
-              props.history.push(e.target.value)
-            }
         })
     }
 
@@ -77,11 +45,10 @@ function AddWorkout(props){
     const workoutPlanItem=props.workoutPlan.map((exercise)=>{
         return(
             <li key={exercise.id}>
-                <input type='checkbox'/>
-                <h4 name='name' value={exercise.name}>Name: {exercise.name}</h4>
-                <label value={exercise.description}><strong>Description:<br/>{exercise.description}</strong><br/></label>
-                <span value={exercise.set}><strong>Number of Sets: {exercise.numOfSets}</strong><br/></span>
-                <span value={exercise.reps}><strong>Number of Reps: {exercise.numOfReps}</strong><br/></span>
+                <h3 name='name' value={exercise.name}><input type='checkbox'/>Name: {exercise.name}<br/></h3>
+                <h3 id='description-heading' value={exercise.description}>Description:<br/>{exercise.description}<br/></h3>
+                <span id='setSpan' value={exercise.set}><strong>Number of Sets: {exercise.numOfSets}</strong><br/></span>
+                <span id='repSpan' value={exercise.Reps}><strong>Number of Reps: {exercise.numOfReps}</strong><br/></span>
                 <button id='removeWorkoutBtn' onClick={handleRemoveWorkout} value={exercise.workoutID}>Remove</button>
             </li>
         )
@@ -89,22 +56,12 @@ function AddWorkout(props){
 
     return(
         <div id='workout-page'>
-            {/* <div>
-                <h3>Add a New Workout:</h3>
-                Exercise: <input onClick={handleOnChange} type='text' name='name' placeholder='Exercise Name'/>
-                Description: <input onClick={handleOnChange} type='text' name='description' placeholder='Description'/>
-                <input onClick={handleOnChange} type='text' name='set' placeholder='# of Sets'/>
-                <input onClick={handleOnChange} type='text' name='reps' placeholder='# of Reps'/>
-                <input onClick={handleOnChange} type='text' name='muscles' placeholder='Target Muscle Group'/>
-                <input onClick={handleOnChange} type='text' name='equipment' placeholder='Equipment Used'/>
-                <button onClick={handleAddWorkout}>Add</button>
-            </div> */}
             <div>
                 <div id='dashTimer-container'>
-                    <StopWatch/> 
+                    <StopWatch/>
                 </div>
-                <ul>
-                    <h3>My Workouts:</h3>
+                <ul id='workoutUL'>
+                    <h1 id='workoutUL-heading'>My Workouts:</h1>
                     {workoutPlanItem}
                 </ul>
             </div>
@@ -116,13 +73,15 @@ const mapStateToProps=(state)=>{
     return{
         user:state.userReducer.user,
         workoutPlan:state.userReducer.workoutPlan,
+        workoutUpdated:state.userReducer.workoutUpdated,
         timer:state.userReducer.timer
     }
 }
 
 const mapDispatchToProps=(dispatch=>{
     return{
-        onWorkoutPlanLoaded:(workoutPlan)=>dispatch({type:'WORKOUTPLAN_UPLOADED',payload:workoutPlan})
+        onWorkoutPlanLoaded:(workoutPlan)=>dispatch({type:'WORKOUTPLAN_UPLOADED',payload:workoutPlan}),
+        onWorkoutPlanUpdate:(workoutUpdated)=>dispatch({type:'WORKOUT_UPDATED',payload:workoutUpdated})
     }
 })
 

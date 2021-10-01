@@ -24,6 +24,11 @@ const reducer=(state=initialState,action)=>{
                 ...state,
                 workoutPlan:action.payload
             }
+        case 'WORKOUT_UPDATED':
+            return{
+                ...state,
+                workoutUpdated:action.payload
+            }
         case 'TIMER_UPDATE':
             return{
                 ...state,

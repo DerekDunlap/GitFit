@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar} from "@fortawesome/free-solid-svg-icons";
 import {connect} from 'react-redux'
 import StartWorkoutBtn from "./StartWorkoutBtn";
 
@@ -40,49 +39,24 @@ function Dashboard(props){
     let workoutItem=props.workouts.map((workout)=>{
         return(
             <li key={workout.id}>
-                <h4 name='name' value={workout.name}>Name: {workout.name}</h4>
-                <label value={workout.description}>Description: {workout.description}</label>
-                <span value={workout.set}># of Sets: {workout.numOfSets}</span>
-                <span value={workout.reps}># of Reps{workout.numOfReps}</span>
+                <h2 name='name' value={workout.name}>Name: {workout.name}</h2>
+                <h3 value={workout.description}>Description:<br/>{workout.description}</h3>
+                <h3 value={workout.set}># of Sets: {workout.numOfSets}</h3>
+                <h3 value={workout.reps}># of Reps: {workout.numOfReps}</h3>
                 <button id='addWorkoutBtn' onClick={handleAddWorkout} value={workout.id}>Add</button>
             </li>
         )
     })
 
-
-    // const handleOnSearch=(e)=>{
-    //     const input=e.target.value
-    //     let filtered=input.toUpperCase()
-
-    //      workoutItem=props.workouts.filter((workout)=>{
-    //         console.log(workout.name.toUpperCase(),filtered)
-    //          if(filtered==workout.name.toUpperCase()){
-    //              return(
-    //                 <li key={workout.id}>
-    //                     <h4 name='name' value={workout.name}>Name: {workout.name}</h4>
-    //                     <label value={workout.description}>Description: {workout.description}</label>
-    //                     <span value={workout.set}># of Sets: {workout.numOfSets}</span>
-    //                     <span value={workout.reps}># of Reps{workout.numOfReps}</span>
-    //                     Rating: <button><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></button>
-    //                     <button onClick={handleAddWorkout} value={workout.id}>Add</button>
-    //                 </li>
-    //              )
-    //          }
-    //     })
-    // }
-
     return(
-        <div id='content-container'>
             <div id='dashboard-div'>
-                <h1>Ready to GitFit, {props.user.username}?!</h1>
+                <h1 id='dashboard-heading'>Ready to GitFit, {props.user.username}?</h1>
                 <StartWorkoutBtn/>
-                {/* <input onChange={handleOnSearch} type='text' placeholder='Search Workouts'/> */}
                 <ul id='workoutUL'>
-                    <h2>Recommend Workouts:</h2>
+                    <h1 id='workoutUL-heading'>Recommended Workouts:</h1>
                     {workoutItem}
                 </ul>
             </div>
-        </div>
     )
 }
 

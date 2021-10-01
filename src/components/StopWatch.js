@@ -41,7 +41,7 @@ function StopWatch(props){
     }
     
 
-    return(<div id='controls-container'>
+    return(<div id='StopWatch-container'>
                 <StopWatchTimer time={props.timer}/>
                 <StopWatchBtns 
                 isActive={isActive}

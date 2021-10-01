@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 :root{
     --time-color: #ffffff;
     --stopwatch-button: #5AB9EA;
@@ -30,14 +31,12 @@ body{
     background-color: #0B0C10;
 }
 
-#page-container{
+#baseLayout-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100vh;
-    background-color: #0B0C10;
 }
 
 #quoteHeader{
@@ -256,31 +255,33 @@ a:link{
     padding: 0.7em 2em;
     border-radius: 65px;
     box-shadow: 1px 1px 8px #5AB9EA;
-    width: 40%;
+    width: 200px;
 }
 
 #addWorkoutBtn{
     position: relative;
     border:5em;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     background: linear-gradient(21deg,#5AB9EA,#8860C0);
-    padding: 0.7em 2em;
-    border-radius: 65px;
+    padding: 0.4em 2em;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px #5AB9EA;
-    width: 15%;
+    width: 115px;
 }
 
 #removeWorkoutBtn{
     position: relative;
     border:5em;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     background: linear-gradient(21deg,#5AB9EA,#8860C0);
-    padding: 0.7em 2em;
-    border-radius: 65px;
+    padding: 0.4em 2em;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px #5AB9EA;
-    width: 20%;
+    width: 150px;
+    margin-left:20px ;
+    margin-top:20px;
 }
 
 #signUpBtn{
@@ -314,7 +315,8 @@ a:link{
     position:relative;
     background-color: #5AB9EA;
     display: flex;
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     z-index: 50;
     justify-content: space-around;
     width: 100%;
@@ -324,7 +326,8 @@ a:link{
 #footer-div{
     background-color: #5AB9EA;
     display: flex;
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     z-index: 50;
     justify-content: space-around;
     width: 100%;
@@ -360,13 +363,6 @@ a:link{
 
 
 /*****----Dashboard Styling----*****/
-#content-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    overflow: auto;
-}
 
 #workout-page{
     display: flex;
@@ -374,16 +370,15 @@ a:link{
     align-items: center;
     justify-content: center;
     width: 100%;
-    overflow: auto;
 }
 
 #stopwatch-page{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 95vh;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100vh;
     background-color: #0B0C10;
 }
 
@@ -392,14 +387,23 @@ a:link{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
-    width: 600px;
+    min-height: 100%;
+    min-width: 100%;
     border: 2px solid;
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px var(--time-color);
     animation: glow 1s ease-in-out infinite alternate;
     color: var(--time-color);
 }
+
+#circle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 275px;
+}
+
 
 @keyframes glow{
     from {
@@ -411,17 +415,12 @@ a:link{
     }
   }
 
-#controls-container{
+#StopWatch-container{
     display: flex;
-    height: 190px;
-    width: 80%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-#controls-container{
-    background-color: #0B0C10;
+    width: 200px;
 }
 
 #dashTimer-container{
@@ -436,10 +435,8 @@ a:link{
 
 #StopWatchTimer{
     text-align: center;
-    max-width: 85%;
     font-family: 'Orbitron',sans-serif;
-    font-size: 60px;
-    background-color: #0B0C10;
+    font-size: 250%;
     text-shadow: 0 0 2px var(--time-color), 0 0 2px var(--time-color), 0 0 4px var(--time-color), 0 0 2px var(--time-color), 0 0 6px var(--time-color), 0 0 30px var(--time-color), 0 0 6px var(--time-color);
     color: var(--time-color);
 }
@@ -454,7 +451,7 @@ a:link{
 
 #ActiveBtn{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -476,8 +473,8 @@ a:link{
 
 #stopwatch-icon{
     font-size: 4em;
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 40px;
     color: #5AB9EA;
 }
 
@@ -488,7 +485,44 @@ a:link{
     justify-content: center;
 }
 
+#dashboard-heading{
+    text-align: center;
+    margin: 20px;
+}
+
+#workoutUL-heading{
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
 #workoutUL{
+    display: flex;
+    flex-direction: column;
+    margin: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 0;
+    justify-content: center;
     list-style-type: none;
+    background: linear-gradient(84deg,#1DB9AE,#8860C0);
+    color: #001b32;
+    border-radius: 1em;
+}
+
+#workoutUL li{
+    margin: 5%;
+}
+
+#description-heading{
+    margin:20px;
+}
+
+#setSpan{
+    margin:20px;
+}
+
+#repSpan{
+    margin:20px;
 }
 
