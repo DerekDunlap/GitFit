@@ -77,43 +77,20 @@ a:link{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25%;
-    height: 55vh;
-}
-
-#imageBox{
-    max-width: 55%;
-    min-height: 45%;
-    width: 50%;
-    height: 50%;
-    background: linear-gradient(21deg,#5AB9EA,#8860C0);
-    border-radius: 50%;
-    display: inline-block;
-}
-
-#mobileLoginDiv{
-    display: flex;
-    color: #5AB9EA;
-    flex-direction: column;
     width: 100%;
-    height: 35vh;
-    align-items: center;
+    height: 100vh;
 }
 
-#mobileRegisterDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 90%;
+#logoDiv img{
     height: 50vh;
+    width: 320px;
 }
 
 #loginDiv{
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 75%;
+    width: 100%;
+    height: 50vh;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -517,16 +494,6 @@ a:link{
     width: 100%;
 }
 
-#userInfo{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1%;
-    margin-left: 35%;
-    margin-right: 35%;
-    padding: 5%;
-    border-radius: 1em;
-    background: linear-gradient(182deg,#1DB9AE,#8860C0);
-}
 
 
 #workoutUL{

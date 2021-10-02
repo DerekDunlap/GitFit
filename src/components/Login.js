@@ -54,8 +54,8 @@ function Login(props) {
   return (
     <div id='login-container'>
       <div id='logoDiv'>
-      </div>
-      <div id='loginDiv'>
+        <img src='/GitFit.png'/>
+        <div id='loginDiv'>
         <div id='loginTextDiv'>
           <span id='textBoxBorder'>
           <input id='usernameTextBox' onChange={handleOnChange} type='text' placeholder='Username' name='username' required/>
@@ -73,6 +73,7 @@ function Login(props) {
         <div id='loginBtnDiv'>
           <button id='loginBtn' onClick={handleRouteChange} value='/register'>No GitFit?</button>
         </div>
+      </div>
       </div>
     </div>
   )
