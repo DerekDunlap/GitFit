@@ -1,7 +1,9 @@
+import { faDumbbell, faHome, faSignOutAlt, faStopwatch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useHistory } from "react-router";
 
-function Navbar(props){
+function Navbar(){
     const history=useHistory()
 
     const handleRouteChange=(e)=>{
@@ -10,10 +12,10 @@ function Navbar(props){
 
     return(
         <nav id='dashboard-navbar'>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/dashboard'>Home</button>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/workouts'>My Workout</button>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/stopwatch'>StopWatch</button>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/'>Log Out</button>
+            <button id='dashboardBtn' onClick={handleRouteChange} value='/dashboard'><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></button>
+            <button id='dashboardBtn' onClick={handleRouteChange} value='/workouts'><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon></button>
+            <button id='dashboardBtn' onClick={handleRouteChange} value='/stopwatch'><FontAwesomeIcon icon={faStopwatch}></FontAwesomeIcon></button>
+            <button id='dashboardBtn' onClick={handleRouteChange} value='/'><FontAwesomeIcon icon={faSignOutAlt}></FontAwesomeIcon></button>
         </nav>
     )
 }

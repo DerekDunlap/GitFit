@@ -7,7 +7,6 @@ function StopWatch(props){
    
     const [isActive,setIsActive]=useState(false)
     const [isPaused,setIsPaused]=useState(true)
-    // const [time,setTime]=useState(0)
 
     useEffect(()=>{
         let timeInterval=null;

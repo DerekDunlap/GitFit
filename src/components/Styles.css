@@ -195,7 +195,7 @@ a:link{
     display: flex;
     height: 50%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #textBoxBorder{
@@ -204,6 +204,27 @@ a:link{
     padding: 5px;
     display: inline-block;
     border-radius: 9999em;
+}
+
+#goalWeightBoxBorder{
+    justify-content: center;
+    background: linear-gradient(21deg,#5AB9EA,#8860C0);
+    padding: 5px;
+    display: inline-block;
+    border-radius: .5em;
+}
+
+#goalWeightTextBox{
+    display: inherit;
+    border-radius: inherit;
+    font-size: 25px;
+    width: 240px;
+    height: 96%;
+    margin: 0%;
+    border:none;
+    outline: none;
+    z-index: 1;
+    position: relative;
 }
 
 #usernameTextBox{
@@ -495,6 +516,18 @@ a:link{
     margin-bottom: 20px;
     width: 100%;
 }
+
+#userInfo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 5%;
+    border-radius: 1em;
+    background: linear-gradient(182deg,#1DB9AE,#8860C0);
+}
+
 
 #workoutUL{
     display: flex;

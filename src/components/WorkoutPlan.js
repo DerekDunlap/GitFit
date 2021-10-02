@@ -1,13 +1,14 @@
-import React,{useEffect} from "react"
+import React,{useState,useEffect} from "react"
 import {connect} from 'react-redux'
 import StopWatch from "./StopWatch";
-import StopWatchBtns from "./StopWatchBtns";
-import StopWatchTimer from "./StopWatchTimer";
 
 function AddWorkout(props){
     useEffect(()=>{
         getMyWorkoutPlan()
     },[])
+
+    const [targetWeight,setTargetWeight]=useState()
+    const [goalWeight,setGoalWeight]=useState(props.user.pounds)
 
     const getMyWorkoutPlan=()=>{
         fetch(`http://localhost:8080/my-workoutplan`,{
@@ -54,17 +55,40 @@ function AddWorkout(props){
         )
     })
 
+    const handleOnChange=(e)=>{
+        setTargetWeight(targetWeight=>e.target.value)
+    }
+
+    const handleOnSetGoal=()=>{
+        setGoalWeight(goalWeight=>targetWeight)
+    }
+
     return(
         <div id='workout-page'>
-            <div>
                 <div id='dashTimer-container'>
                     <StopWatch/>
                 </div>
+                {/* <div id='userInfo'>
+                    <div>
+                        <h2>Current Weight</h2>
+                        <h2>Height: {props.user.feet}' {props.user.inches}"</h2><h2>Weight: {props.user.pounds} lbs</h2>
+                    </div>
+                    <div>
+                        <span id='goalWeightBoxBorder'>
+                            <input id='goalWeightTextBox' onChange={handleOnChange} type='number' min='0' max='600' placeholder='Goal Weight Here' name='username' required/>
+                            <span></span>
+                        </span>
+                        <button id='removeWorkoutBtn' onClick={handleOnSetGoal}>Set Goal</button>
+                    </div>
+                    <div>
+                        <h2>Goal Weight</h2>
+                        <h2>Height: {props.user.feet}' {props.user.inches}"</h2><h2>Weight: {goalWeight} lbs</h2>
+                    </div>
+                </div> */}
                 <ul id='workoutUL'>
                     <h1 id='workoutUL-heading'>My Workouts:</h1>
                     {workoutPlanItem}
                 </ul>
-            </div>
         </div>
     )
 }
