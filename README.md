@@ -17,26 +17,26 @@ This means that users are free to Create an account that will then be properly e
 __________________________________________________
 
 ## Software used: ##
-**Front-End**
-*Javascript
-*React
-*Redux
-*HTML
-*CSS
+**Front-End**<br/>
+*Javascript*
+*React*
+*Redux*
+*HTML*
+*CSS*
 
-**Back-End**
+**Back-End**<br/>
 *Javascript*
 *Express*
 *Node.js*
 *Sequelize*
 *bcryptjs*
 
-**Database**
+**Database**<br/>
 *ElephantSQL*
 *PostgreSQL*
 *Managed via Beekeeper*
 
-**Deployed via:**
+**Deployed via:**<br/>
 *HEROKU* - For the server*
 *SURGE* - For the client*
 __________________________________________________
