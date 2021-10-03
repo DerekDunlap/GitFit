@@ -18,26 +18,26 @@ __________________________________________________
 
 ## Software used: ##
 **Front-End**<br/>
-*Javascript*
-*React*
-*Redux*
-*HTML*
+*Javascript*<br/>
+*React*<br/>
+*Redux*<br/>
+*HTML*<br/>
 *CSS*
 
 **Back-End**<br/>
-*Javascript*
-*Express*
-*Node.js*
-*Sequelize*
+*Javascript*<br/>
+*Express*<br/>
+*Node.js*<br/>
+*Sequelize*<br/>
 *bcryptjs*
 
 **Database**<br/>
-*ElephantSQL*
-*PostgreSQL*
+*ElephantSQL*<br/>
+*PostgreSQL*<br/>
 *Managed via Beekeeper*
 
 **Deployed via:**<br/>
-*HEROKU* - For the server*
+*HEROKU* - For the server*<br/>
 *SURGE* - For the client*
 __________________________________________________
 
