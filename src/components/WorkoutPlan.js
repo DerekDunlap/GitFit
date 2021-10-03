@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react"
+import React,{useEffect} from "react"
 import {connect} from 'react-redux'
 import StopWatch from "./StopWatch";
 
@@ -7,11 +7,8 @@ function AddWorkout(props){
         getMyWorkoutPlan()
     },[])
 
-    const [targetWeight,setTargetWeight]=useState()
-    const [goalWeight,setGoalWeight]=useState(props.user.pounds)
-
     const getMyWorkoutPlan=()=>{
-        fetch(`http://localhost:8080/my-workoutplan`,{
+        fetch('https://frozen-caverns-60178.herokuapp.com/my-workoutplan',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -28,7 +25,7 @@ function AddWorkout(props){
     }
 
     const handleRemoveWorkout=(e)=>{
-        fetch('http://localhost:8080/remove-workout',{
+        fetch('https://frozen-caverns-60178.herokuapp.com/remove-workout',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -55,14 +52,6 @@ function AddWorkout(props){
         )
     })
 
-    const handleOnChange=(e)=>{
-        setTargetWeight(targetWeight=>e.target.value)
-    }
-
-    const handleOnSetGoal=()=>{
-        setGoalWeight(goalWeight=>targetWeight)
-    }
-
     return(
         <div id='workout-page'>
                 <div id='dashTimer-container'>
@@ -77,11 +66,12 @@ function AddWorkout(props){
 }
 
 const mapStateToProps=(state)=>{
+    console.log(state)
     return{
-        user:state.userReducer.user,
-        workoutPlan:state.userReducer.workoutPlan,
-        workoutUpdated:state.userReducer.workoutUpdated,
-        timer:state.userReducer.timer
+        user:state.user,
+        workoutPlan:state.workoutPlan,
+        workoutUpdated:state.workoutUpdated,
+        timer:state.timer
     }
 }
 

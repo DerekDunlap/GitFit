@@ -54,7 +54,7 @@ function StopWatch(props){
 
 const mapStateToProps=(state)=>{
     return{
-        timer: state.userReducer.timer
+        timer: state.timer
     }
 }
 

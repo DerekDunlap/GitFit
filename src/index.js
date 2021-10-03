@@ -7,20 +7,15 @@ import Register from './components/Register'
 import Dashboard from './components/Dashboard'
 import reportWebVitals from './reportWebVitals';
 import './components/Styles.css'
-import userReducer from './components/store/reducer/user'
-import workoutsReducer from './components/store/reducer/workouts'
-import {combineReducers, createStore} from 'redux'
+import reducer from './components/store/reducer/user'
+import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import WorkoutPlan from './components/WorkoutPlan';
 import BaseLayoutDash from './components/BaseLayoutDash';
 import StopWatchPage from './components/StopWatchPage';
 
-const rootReducer=combineReducers({
-  userReducer:userReducer,
-  workoutsReducer:workoutsReducer
-})
 
-const store=createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store=createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <React.StrictMode>

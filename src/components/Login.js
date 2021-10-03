@@ -18,7 +18,7 @@ function Login(props) {
   }
 
   const handleOnGuestLogin=(e)=>{
-    fetch('http://localhost:8080/guest-login')
+    fetch('https://frozen-caverns-60178.herokuapp.com/guest-login')
     .then(response=>{
       return response.json()
     }).then(results=>{
@@ -29,7 +29,7 @@ function Login(props) {
   }
 
   const handleOnLogin=(e)=>{
-    fetch('http://localhost:8080/login',{
+    fetch('https://frozen-caverns-60178.herokuapp.com/login',{
        method: 'POST',
        headers:{
            'Content-Type':'application/json'

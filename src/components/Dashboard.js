@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {connect} from 'react-redux'
 import StartWorkoutBtn from "./StartWorkoutBtn";
 
@@ -9,7 +8,7 @@ function Dashboard(props){
     },[])
 
     const getAllWorkouts=()=>{
-        fetch('http://localhost:8080/workouts')
+        fetch('https://frozen-caverns-60178.herokuapp.com/workouts')
         .then(response=>{
             return response.json()
         }).then(results=>{
@@ -20,7 +19,7 @@ function Dashboard(props){
     const handleAddWorkout=(e)=>{
         console.log(props.user.id)
         console.log(e.target.value)
-        fetch('http://localhost:8080/add-workout',{
+        fetch('https://frozen-caverns-60178.herokuapp.com/add-workout',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -31,7 +30,8 @@ function Dashboard(props){
         }).then(response=>{
             return response.json()
         }).then(result=>{
-            props.onGuestWorkoutPlanLoaded(result)
+            console.log(result)
+            //props.onWorkoutPlanLoaded(result)
         })
     }
 
@@ -61,17 +61,17 @@ function Dashboard(props){
 }
 
 const mapStateToProps=(state)=>{
-    console.log(state.userReducer.user)
+    console.log(state.user)
     return{
-        user:state.userReducer.user,
-        workouts:state.userReducer.workouts
+        user:state.user,
+        workouts:state.workouts
     }
 }
 
 const mapDispatchToProps=(dispatch)=>{
     return{
         onWorkoutLoaded:(workouts)=>dispatch({type:'WORKOUTS_UPLOADED',payload:workouts}),
-        onGuestWorkoutPlanLoaded:(guestWorkoutPlan)=>dispatch({type:'WORKOUTPLAN_UPLOADED',payload:guestWorkoutPlan})
+        onWorkoutPlanLoaded:(guestWorkoutPlan)=>dispatch({type:'WORKOUTPLAN_UPLOADED',payload:guestWorkoutPlan})
     }
 }
 

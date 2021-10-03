@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 function Footer(props){
     const history=useHistory()
     const handleRouteChange=(e)=>{
-            fetch('http://localhost:8080/delete-user',{
+            fetch('https://frozen-caverns-60178.herokuapp.com/delete-user',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
@@ -28,7 +28,7 @@ function Footer(props){
 
 const mapStateToProps=(state)=>{
     return{
-        user:state.userReducer.user
+        user:state.user
     }
 }
 
