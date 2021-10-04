@@ -43,6 +43,26 @@ __________________________________________________
 
 ## Live Screenshots of GitFit: ##
 
+Showcasing of GitFit Responsiveness:
+
+
+Showcasing of Creating an account on GitFit:
+
+
+Showcasing of Logging into GitFit account:
+
+
+Showcasing of Guest Login feature on GitFit:
+
+
+Showcasing of Adding/Removing workout(s) from account:
+
+
+Showcasing of Starting a Workout Session with Stopwatch feature:
+
+
+Showcasing of Deleting/Logging out of of GitFit Account:
+
 
 __________________________________________________
 
