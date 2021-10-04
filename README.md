@@ -45,25 +45,31 @@ __________________________________________________
 
 Showcasing of GitFit Responsiveness:
 
-https://www.loom.com/share/24d4edd3b495473e96f0aab881b52318
+https://www.loom.com/share/6c664c7e49574e1895772b172d74ccda?sharedAppSource=personal_library
 
 Showcasing of Creating an account on GitFit:
 
+https://www.loom.com/share/91e78657cbb84e0185a9ecdb3ded2400?sharedAppSource=personal_library
 
 Showcasing of Logging into GitFit account:
 
+https://www.loom.com/share/07ca75f7b36644e08741204d5c1d4f82?sharedAppSource=personal_library
 
 Showcasing of Guest Login feature on GitFit:
 
+https://www.loom.com/share/07bde8a052c1444a8d6c81975c8acd76?sharedAppSource=personal_library
 
 Showcasing of Adding/Removing workout(s) from account:
 
+https://www.loom.com/share/b8843185a40846cfb2a253237098fa17?sharedAppSource=personal_library
 
 Showcasing of Starting a Workout Session with Stopwatch feature:
 
+https://www.loom.com/share/92b32ab3b1e147e4a083e426749cc74b?sharedAppSource=personal_library
 
 Showcasing of Deleting/Logging out of of GitFit Account:
 
+https://www.loom.com/share/24d4edd3b495473e96f0aab881b52318
 
 __________________________________________________
 
