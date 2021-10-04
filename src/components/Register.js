@@ -20,7 +20,7 @@ function Register(props){
 
     const onCreateAcc=()=>{
         console.log(user.username,user.password)
-        fetch('https://frozen-caverns-60178.herokuapp.com/register',{
+        fetch('https://arcane-shelf-00451.herokuapp.com/register',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

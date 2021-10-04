@@ -1,5 +1,3 @@
-import { faDumbbell, faHome, faSignOutAlt, faStopwatch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useHistory } from "react-router";
 
@@ -11,11 +9,13 @@ function Navbar(){
     }
 
     return(
-        <nav id='dashboard-navbar'>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/dashboard'><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></button>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/workouts'><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon></button>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/stopwatch'><FontAwesomeIcon icon={faStopwatch}></FontAwesomeIcon></button>
-            <button id='dashboardBtn' onClick={handleRouteChange} value='/'><FontAwesomeIcon icon={faSignOutAlt}></FontAwesomeIcon></button>
+        <nav class="desktop-menu">
+            <ul className="menu__list r-list">
+                <li className="menu__group"><button onClick={handleRouteChange} value='/dashboard' className="menu__link r-link text-underlined">Home</button></li>
+                <li className="menu__group"><button onClick={handleRouteChange} value='/workouts' className="menu__link r-link text-underlined">My Workouts</button></li>
+                <li className="menu__group"><button onClick={handleRouteChange} value='/stopwatch' className="menu__link r-link text-underlined">Stopwatch</button></li>
+                <li className="menu__group"><button onClick={handleRouteChange} value='/' className="menu__link r-link text-underlined">Logout</button></li>
+            </ul>
         </nav>
     )
 }

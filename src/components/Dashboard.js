@@ -8,7 +8,7 @@ function Dashboard(props){
     },[])
 
     const getAllWorkouts=()=>{
-        fetch('https://frozen-caverns-60178.herokuapp.com/workouts')
+        fetch('https://arcane-shelf-00451.herokuapp.com/workouts')
         .then(response=>{
             return response.json()
         }).then(results=>{
@@ -19,7 +19,7 @@ function Dashboard(props){
     const handleAddWorkout=(e)=>{
         console.log(props.user.id)
         console.log(e.target.value)
-        fetch('https://frozen-caverns-60178.herokuapp.com/add-workout',{
+        fetch('https://arcane-shelf-00451.herokuapp.com/add-workout',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

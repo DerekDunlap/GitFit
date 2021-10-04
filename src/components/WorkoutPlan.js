@@ -8,7 +8,7 @@ function AddWorkout(props){
     },[])
 
     const getMyWorkoutPlan=()=>{
-        fetch('https://frozen-caverns-60178.herokuapp.com/my-workoutplan',{
+        fetch('https://arcane-shelf-00451.herokuapp.com/my-workoutplan',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -25,7 +25,7 @@ function AddWorkout(props){
     }
 
     const handleRemoveWorkout=(e)=>{
-        fetch('https://frozen-caverns-60178.herokuapp.com/remove-workout',{
+        fetch('https://arcane-shelf-00451.herokuapp.com/remove-workout',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
