@@ -69,7 +69,7 @@ https://www.loom.com/share/92b32ab3b1e147e4a083e426749cc74b?sharedAppSource=pers
 
 Showcasing of Deleting/Logging out of of GitFit Account:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/24d4edd3b495473e96f0aab881b52318" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe src="https://www.loom.com/embed/24d4edd3b495473e96f0aab881b52318" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 
 __________________________________________________
 
