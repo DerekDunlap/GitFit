@@ -45,9 +45,8 @@ __________________________________________________
 
 Showcasing of GitFit Responsiveness:
 
-<figure class="video_container">
-  <iframe src="https://www.loom.com/share/6c664c7e49574e1895772b172d74ccda?sharedAppSource=personal_library" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+https://www.loom.com/share/6c664c7e49574e1895772b172d74ccda?sharedAppSource=personal_library
+
 
 Showcasing of Creating an account on GitFit:
 
