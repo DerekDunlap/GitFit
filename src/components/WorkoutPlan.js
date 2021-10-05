@@ -8,13 +8,13 @@ function AddWorkout(props){
     },[])
 
     const getMyWorkoutPlan=()=>{
+        const token=localStorage.getItem('Bearer')
+        console.log(`Bearer ${token}`)
         fetch('https://arcane-shelf-00451.herokuapp.com/my-workoutplan',{
-            method:'POST',
+            method:'GET',
             headers:{
-                'Content-Type':'application/json'
-            },body:JSON.stringify({
-                userID:props.user.id
-            })
+                Authorization:`Bearer ${token}`
+            }
         })
         .then(response=>{
             return response.json()

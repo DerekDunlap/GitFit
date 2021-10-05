@@ -23,7 +23,8 @@ function Login(props) {
       return response.json()
     }).then(results=>{
       console.log(results)
-      props.onUserLogin(results.guest)
+      localStorage.setItem('Bearer',results.guestToken)
+      // props.onUserLogin(results.guest)
       props.history.push(e.target.value)
     })
   }
@@ -43,11 +44,8 @@ function Login(props) {
         return response.json()
     }).then(user=>{
       console.log(user)
-        if(user.success){
-          console.log(user.user)
-          props.onUserLogin(user.user)
-          props.history.push(e.target.value)
-        }
+      localStorage.setItem('Bearer',user.userToken)
+      props.history.push(e.target.value)
     })
 }
 

@@ -9,7 +9,7 @@ function Navbar(){
     }
 
     return(
-        <nav class="desktop-menu">
+        <nav className="desktop-menu">
             <ul className="menu__list r-list">
                 <li className="menu__group"><button onClick={handleRouteChange} value='/dashboard' className="menu__link r-link text-underlined">Home</button></li>
                 <li className="menu__group"><button onClick={handleRouteChange} value='/workouts' className="menu__link r-link text-underlined">My Workouts</button></li>

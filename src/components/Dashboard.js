@@ -8,7 +8,12 @@ function Dashboard(props){
     },[])
 
     const getAllWorkouts=()=>{
-        fetch('https://arcane-shelf-00451.herokuapp.com/workouts')
+        fetch('https://arcane-shelf-00451.herokuapp.com/workouts',{
+            method:'GET',
+            headers:{
+                Authorization:`Bearer ${localStorage.getItem('Bearer')}`
+            }
+        })
         .then(response=>{
             return response.json()
         }).then(results=>{
