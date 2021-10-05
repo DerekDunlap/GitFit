@@ -54,7 +54,9 @@ function Login(props) {
   return (
     <div id='login-container'>
       <div id='logoDiv'>
-        <img src='/GitFit.png'/>
+        <div id='logoDiv'>
+          <img src='/GitFit.png'/>
+        </div>
         <div id='loginDiv'>
         <div id='loginTextDiv'>
           <span id='textBoxBorder'>
